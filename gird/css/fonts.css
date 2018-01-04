@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Oswald';
+    src: local(Oswald-Regular), url('./font/Oswald-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OswaldBold';
+    src: local(Oswald-Bold), url('./font/Oswald-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OswalLight';
+    src: local(Oswald-Light), url('./font/Oswald-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PTSerif';
+    src: local(PT_Serif-Web-Regular), url('./font/PT_Serif-Web-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PTSerifItalic';
+    src: local(PT_Serif-Web-Italic), url('./font/PT_Serif-Web-Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PTSerifBoldItalic';
+    src: local(PT_Serif-Web-BoldItalic), url('./font/PT_Serif-Web-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PTSerifBold';
+    src: local(PT_Serif-Web-Bold), url('./font/PT_Serif-Web-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'VarelaRound';
+    src: local(VarelaRound-Regular), url('./font/VarelaRound-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url('./font/fontello.eot?17718492');
+    src: url('./font/fontello.eot?17718492#iefix') format('embedded-opentype'), url('./font/fontello.woff2?17718492') format('woff2'), url('./font/fontello.woff?17718492') format('woff'), url('./font/fontello.ttf?17718492') format('truetype'), url('./font/fontello.svg?17718492#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

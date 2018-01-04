@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20171130과제</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <h1 class="logo">
+                <a href="#"><img src="./images/logo.png"> </a>
+            </h1>
+            <ul class="member">
+                <li><a href="#" class="login">로그인</a></li>
+                <li><a href="#" class="signup">회원가입</a></li>
+                <li><a href="#" class="cart">장바구니</a></li>
+            </ul>
+            <div class="search">
+                <h2 class="readable-hidden">검색</h2>
+                <form action="???" id="search-form">
+                    <fieldset>
+                        <legend>검색 폼</legend>
+                        <div class="flex-container">
+                            <label for="keyward" class="readable-hidden">자료검색</label>
+                            <input type="search" id="keyward" required placeholder="Search for product">
+                            <button type="submit" class="btn-search">검색</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <nav class="navi">
+                <h2 class="readable-hidden">메인메뉴</h2>
+                <div class="menubar-container">
+                    <input class="check-menubar" name="btn-menu" type="checkbox" id="b1">
+                    <label class="labelmenu" for="b1">
+                    
+                    <span class="menubar menubar-top"></span>
+                    <span class="menubar menubar-mid"></span>
+                    <span class="menubar menubar-bot"></span>
+                    
+                    </label>
+
+                    <ul class="mainmenu">
+                        <label for="close" for="b1">aaaaa</label>
+                        <li><a href="#">Trends</a></li>
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Bottom</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Accessories</a></li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="main-grid-container">
+
+                <div class="product-wrap-grid">
+                    <div class="product1">
+                        <div class="hoverwarp"></div>
+
+                        <span class="imgtext prd-text-grid">Lacoste Men's Pocket Polo Shirt - Sahara</span>
+                        <img class="imgproduct prdimg-grid" src="./images/tshir1.png" alt="##">
+
+                        <img class="icon-grid" src="./images/Hit.png" alt="##">
+                        <span class="price price-grid">$75</span>
+                        <select class="size">
+                                    <option value="s ">S</option>
+                                    <option value="m ">M</option>
+                                    <option value="l ">L</option>
+                                    <option value="xl ">XL</option>
+                            </select>
+                        <button class="addcart" type="sumit">Add to cart</button>
+                        <span class="addwish">Add to wishlist</span>
+                    </div>
+
+                    <div class="product1">
+                        <div class="hoverwarp"></div>
+                        <span class="imgtext prd-text-grid">Red Wing Men's Classic Suede Chukka Boots - Sage</span>
+                        <img class="imgproduct prdimg-grid" src="./images/shoes1.png" alt="##">
+                        <img class="icon-grid" src="./images/sale.png ">
+                        <span class="price price-grid ">$55</span>
+                        <p class="price-sale-grid price-sale ">$60</p>
+                        <select class="size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                        <button class="addcart" type="sumit">Add to cart</button>
+                        <span class="addwish">Add to wishlist</span>
+                    </div>
+
+                    <div class="product1">
+                        <div class="hoverwarp"></div>
+                        <span class="prd-text-grid imgtext">Lyle & Scott Men's Short Sleeve Camo Pocket</span>
+                        <img class="prdimg-grid imgproduct" src="./images/tshirt2.png" alt="##">
+
+                        <span class="price-grid price">$60</span>
+                        <select class="size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                        <button class="addcart" type="sumit">Add to cart</button>
+                        <span class="addwish">Add to wishlist</span>
+                    </div>
+
+                    <div class="product1">
+                        <div class="hoverwarp"></div>
+                        <span class="prd-text-grid imgtext">Lacoste Men's Polo Shirt - Bright Pink</span>
+                        <img class="prdimg-grid imgproduct" src="./images/shoes2.png" alt="##">
+                        <img class="icon-grid" src="./images/new.png">
+                        <span class="price-grid price">$85</span>
+                        <select class="size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                        <button class="addcart" type="sumit">Add to cart</button>
+                        <span class="addwish">Add to wishlist</span>
+                    </div>
+
+
+                </div>
+                <div class="product2-wrap-grid">
+
+
+                    <div class="product-category2">
+
+
+                        <div class="product2">
+
+                            <div class="prd2-text-grid"><span class="img2text">Luke 1977 Men's Soeron 2 Single Breasted Blazer</span></div>
+                            <div class="prd2sub-text-grid"><span class="img2subtext">Blazers</span></div>
+                            <div class="prd2img-grid"><img class="c2-imgproduct" src="./images/jaket.png" alt="##"></div>
+                            <div class="icon2-grid"><img src="./images/Hit.png "></div>
+
+                            <span class="price2-grid">$75</span>
+
+                            <span class="price2-sale-grid">$60</span>
+                            <select class="c2size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                            <button class="c2addcart" type="sumit">Add to cart</button>
+                            <span class="c2addwish">Add to wishlist</span>
+                        </div>
+
+                        <div class="product2">
+
+                            <div class="prd2-text-grid"><span class="img2text">Luke 1977 Men's Soeron 2 Single Breasted Blazer</span></div>
+                            <div class="prd2sub-text-grid"><span class="img2subtext">Blazers</span></div>
+                            <div class="prd2img-grid"><img class="c2-imgproduct" src="./images/ss1.png" alt="##"></div>
+                            <div class="icon2-grid"><img src="./images/Hit.png "></div>
+
+                            <span class="price2-grid">$75</span>
+
+                            <span class="price2-sale-grid">$60</span>
+                            <select class="c2size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                            <button class="c2addcart" type="sumit">Add to cart</button>
+                            <span class="c2addwish">Add to wishlist</span>
+                        </div>
+
+                        <div class="product2">
+
+                            <div class="prd2-text-grid"><span class="img2text">Luke 1977 Men's Soeron 2 Single Breasted Blazer</span></div>
+                            <div class="prd2sub-text-grid"><span class="img2subtext">Blazers</span></div>
+                            <div class="prd2img-grid"><img class="c2-imgproduct" src="./images/bb1.png" alt="##"></div>
+                            <div class="icon2-grid"><img src="./images/Hit.png "></div>
+
+                            <span class="price2-grid">$75</span>
+
+                            <span class="price2-sale-grid">$60</span>
+                            <select class="c2size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                            <button class="c2addcart" type="sumit">Add to cart</button>
+                            <span class="c2addwish">Add to wishlist</span>
+                        </div>
+
+                        <div class="product2">
+
+                            <div class="prd2-text-grid"><span class="img2text">Luke 1977 Men's Soeron 2 Single Breasted Blazer</span></div>
+                            <div class="prd2sub-text-grid"><span class="img2subtext">Blazers</span></div>
+                            <div class="prd2img-grid"><img class="c2-imgproduct" src="./images/nn1.png" alt="##"></div>
+                            <div class="icon2-grid"><img src="./images/Hit.png "></div>
+
+                            <span class="price2-grid">$75</span>
+
+                            <span class="price2-sale-grid">$60</span>
+                            <select class="c2size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                            <button class="c2addcart" type="sumit">Add to cart</button>
+                            <span class="c2addwish">Add to wishlist</span>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="product3-wrap-grid">
+                    <div class="product-category3">
+
+
+                        <div class="product3">
+
+                            <div class="prd3img-grid"><img class="c3-imgproduct" src="./images/480img.png" alt="##"></div>
+                            <div class="icon3-grid"><img src="./images/Hit.png"></div>
+                            <div class="sum-image">
+                                <img class="c3-imgproduct-thum" src="./images/thum1.png" alt="##">
+                                <img class="c3-imgproduct-thum" src="./images/thum2.png" alt="##">
+                                <img class="c3-imgproduct-thum" src="./images/thum3.png" alt="##">
+                            </div>
+                            <div class="checkcolor-warp">
+                                <div class="checkpostion">
+                                    <input class="checkbgc1" name="colorpick" type="radio" id="c1">
+                                    <label class="labelcolor1 " for="c1">blue</label>
+                                </div>
+                                <div class="checkpostion">
+                                    <input class="checkbgc2" name="colorpick" type="radio" id="c2">
+                                    <label class="labelcolor2" for="c2">brown</span></label>
+                                </div>
+                                <div class="checkpostion">
+                                    <input class="checkbgc3" name="colorpick" type="radio" id="c3">
+                                    <label class="labelcolor3" for="c3">white</label>
+                                </div>
+                                <div class="checkpostion">
+                                    <input class="checkbgc4" name="colorpick" type="radio" id="c4">
+                                    <label class="labelcolor4" for="c4">bule</label>
+                                </div>
+                                <div class="checkpostion">
+                                    <input class="checkbgc5" name="colorpick" type="radio" id="c5">
+                                    <label class="labelcolor5" for="c5">red</label>
+                                </div>
+                            </div>
+                            <div class="scale">
+                                <span class="scalespan"></span>
+                            </div>
+                        </div>
+                        <div class="product-detail">
+                            <div class="catetitle"><span>shoes</span></div>
+                            <div class="add-cate">
+                                <span>Adidas Originals</span>
+                            </div>
+                            <div class="prd3-text-grid"><span class="img3text ">Adidas Originals Powerphase OG Sneakers</span></div>
+                            <div class="prd-desc">
+                                <span>With a brand history stretching back over 60 years, adidas Originals draw inspiration from street culture and retro styles to provide fresh vintage inspired menswear.</span>
+                            </div>
+                            <div class="prd-desc-1">
+
+                                <li>Canvas textile</li>
+                                <li>Suede trim </li>
+                                <li>Shaped, padded cuffs</li>
+                                <li>Lace fastening</li>
+                                <!-- 리스트 ul 스타일 변경 할것-->
+                            </div>
+                            <div class="prd-desc-2">
+
+                                <li>Signature branding</li>
+                                <li>Round toe</li>
+                                <li>Chunky, textured sole</li>
+                                <li>Treat with a leather protector</li>
+
+                            </div>
+
+                            <div class="price3-grid">
+                                <sppan class="price">$344</span>
+                            </div>
+                            <select class="c3size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                </select>
+                            <div class="c3addcart"><button type="sumit">Add to cart</button></div>
+                            <div class="sizeguide"><span class="sizeguide-t">size guide</span></div>
+                            <div class="c3addwish"><span class="c3addtowish">Add to wishlist</span></div>
+                            <div class="price3-sale-grid">
+                                <p class="price3-sale ">$560</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="product4-wrap-grid">
+                    <div class="product1">
+                        <div class="hoverwarp"></div>
+                        <span class="prd-text-grid imgtext">Lacoste Men's Polo Shirt - Bright Pink</span>
+                        <img class="prdimg-grid imgproduct" src="./images/p1.png" alt="##">
+                        <img class="icon-grid" src="./images/new.png">
+                        <span class="price-grid price">$85</span>
+                        <select class="size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                        <button class="addcart" type="sumit">Add to cart</button>
+                        <span class="addwish">Add to wishlist</span>
+                    </div>
+
+                    <div class="product1">
+                        <div class="hoverwarp"></div>
+                        <span class="prd-text-grid imgtext">Lacoste Men's Polo Shirt - Bright Pink</span>
+                        <img class="prdimg-grid imgproduct" src="./images/p2.png" alt="##">
+                        <img class="icon-grid" src="./images/new.png">
+                        <span class="price-grid price">$85</span>
+                        <select class="size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                        <button class="addcart" type="sumit">Add to cart</button>
+                        <span class="addwish">Add to wishlist</span>
+                    </div>
+
+                    <div class="product1">
+                        <div class="hoverwarp"></div>
+                        <span class="prd-text-grid imgtext">Lacoste Men's Polo Shirt - Bright Pink</span>
+                        <img class="prdimg-grid imgproduct" src="./images/pp3.png " alt="##">
+                        <img class="icon-grid" src="./images/new.png">
+                        <span class="price-grid price">$85</span>
+                        <select class="size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                        <button class="addcart" type="sumit">Add to cart</button>
+                        <span class="addwish">Add to wishlist</span>
+                    </div>
+
+                    <div class="product1">
+                        <div class="hoverwarp"></div>
+                        <span class="prd-text-grid imgtext">Lacoste Men's Polo Shirt - Bright Pink</span>
+                        <img class="prdimg-grid imgproduct" src="./images/pp4.png " alt="##">
+                        <img class="icon-grid" src="./images/new.png">
+                        <span class="price-grid price">$85</span>
+                        <select class="size">
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                            </select>
+                        <button class="addcart" type="sumit">Add to cart</button>
+                        <span class="addwish">Add to wishlist</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+
+
+</html

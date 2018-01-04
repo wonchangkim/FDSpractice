@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            margin: 10px 0px 0px 10px;
+            width: 800px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .box {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    <script>
+        let dragging = false;
+        const box = document.querySelector('.box');
+        const container = document.querySelector('.container');
+
+        let containerleft;
+        let containertop;
+        let boxleft;
+        let boxtop;
+        let demensionx;
+        let demensiony;
+
+        box.addEventListener('mousedown', e => {
+
+            dragging = true;
+            
+            containerleft = parseInt(container.offsetLeft);
+            containertop = parseInt(container.offsetTop);
+            boxtop = parseInt(box.offsetTop);
+            boxleft = parseInt(box.offsetLeft);
+            demensionx = e.clientX - (containerleft + boxleft);
+            demensiony = e.clientY - (containertop + boxtop);
+
+            console.log('mousedown', e.clientX, demensionx,  boxleft, containerleft);
+            //클릭이 일어난 순간에 상대적 위치 저장
+            //el.offsetLeft, el.offsetTop
+
+        });
+
+        document.addEventListener('mouseup', e => {
+            dragging = false;
+          
+            console.log(box.style.left, box.style.top);
+        });
+
+        document.addEventListener('mousemove', e => {
+            if (dragging) {
+                box.style.left = `${e.clientX- demensionx}px`;
+                box.style.top = `${e.clientY- demensiony}px`;
+                console.log(e.clientX, e.clientY, dragging);
+            }
+
+        });
+    </script>
+</body>
+
+</html>

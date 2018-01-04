@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>과제</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="modalwarp" onclick="modalclose()">
+        </div>
+        <div class="navbar">
+            <a href="index.html" class="home">Home</a>
+            <ul class="navbarul">
+                <li>
+                    <a href="https://github.com/wonchangkim/">Github</a>
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/ko/">MDN</a>
+                </li>
+                <li>
+                    <button class="carousel-btn menu-btn" type="button" onclick="carouselbtn()">과제보기</button>
+                </li>
+                <li>
+                    <button class="modal-btn menu-btn" type="button" onclick="modalbtn()">Modal</button>
+                </li>
+                
+            </ul>
+        </div>
+
+        <div class="modal">
+            <h3>Modal test</h3>
+            <p>Woohoo, you're reading this text in a modal!</p>
+            <button class="modalcolsebtn" type="button" onclick="modalclose()">Close</button>
+            <span class="icon-cancel" onclick="modalclose()"></span>
+
+        </div>
+
+        <div class="collapse">
+            <div class="collapsecontent">
+                <ul class="collapseitem">
+                    <li>
+                        <a href="./responsive/">반응형과제</a>
+                    </li>
+                    <li>
+                        <a href="./20171127/">아티클</a>
+                    </li>
+                    <li>
+                        <a href="./displaygrid/">displaygrid반응형</a>
+                    </li>
+                    <li>
+                        <a href="./gird/">gird</a>
+                    </li>
+                    <li>
+                        <a href="./calculator/">계산기</a>
+                    </li>
+                    <li>
+                        <a href="./myself/">자기소개</a>
+                    </li>
+                    <li>
+                        <a href="./rgb/">RGB</a>
+                    </li>
+                    <li>
+                        <a href="./todolist/">todolist</a>
+                    </li>
+                    <li>
+                        <a href="./omok/">오목</a>
+                    </li>
+                    <li>
+                        <a href="./test/3.html">test버튼</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="carousel">
+            <div class="corouselinner">
+                <img class="img i1" src="./images/1.jpg" alt="">
+                <img class="img i2" src="./images/2.jpg" alt="">
+                <img class="img i3" src="./images/3.jpg" alt="">
+            </div>
+            <span class="carobtn carousel-prev icon-left-open" onclick="prevSlides()">
+            </span>
+            <span class="carobtn carousel-next icon-right-open" onclick="nextSlides()"></span>
+        </div>
+
+        <div class="con">
+            <div>
+                <a href="./responsive/">반응형과제</a>
+            </div>
+            <div>
+                <a href="./20171127/">아티클</a>
+            </div>
+            <div>
+                <a href="./displaygrid/">displaygrid반응형</a>
+            </div>
+            <div>
+                <a href="./gird/">gird</a>
+            </div>
+            <div>
+                <a href="./calculator/">계산기</a>
+            </div>
+            <div>
+                <a href="./myself/">자기소개</a>
+            </div>
+            <div>
+                <a href="./rgb/">RGB</a>
+            </div>
+            <div>
+                <a href="./todolist/">todolist</a>
+            </div>
+
+            <div>
+                <a href="./omok/">오목</a>
+            </div>
+            <div>
+                <a href="./test/3.html">test버튼</a>
+            </div>
+        </div>
+        <script src="./js/index.js"></script>
+    </div>
+</body>
+
+</html>

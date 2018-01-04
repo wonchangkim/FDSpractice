@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .outter {
+            padding: 20px;
+            background-color: blue;
+        }
+
+        .inner {
+            padding: 20px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outter">
+        <div class="inner">
+            <button>버튼</button>
+        </div>
+    </div>
+    <a href="https://google.com">구글</a>
+    <script>
+        document.querySelector('.outter').addEventListener('click', e=>{
+            // e.currentTarget.classlist.add('ddd');
+            // console.log(e.target);
+            //  console.log(e.currentTarget);
+            alert('outer가 클릭되었습니다.')
+        });
+        document.querySelector('button').addEventListener('click', e =>{
+            alert('button이 클릭되었습니다.')
+            e.stopPropagation();
+        });
+        document.querySelector('a').addEventListener('click',  e => {
+            e.preventDefault(); //링크 작동안함.
+        });
+    </script>
+</body>
+
+</html>

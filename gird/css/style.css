@@ -1,0 +1,760 @@
+@charset "utf-8";
+@import url("./fonts.css");
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #dfdfdf;
+}
+
+[class*="col"] {
+    float: left;
+}
+
+.row::after,
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #dfdfdf;
+}
+
+.col-1 {
+    height: 200px;
+    width: 120px;
+}
+
+.col-2 {
+    height: 200px;
+    width: 240px;
+}
+
+.col-3 {
+    width: 360px;
+}
+
+.col-4 {
+    width: 480px;
+}
+
+.col-5 {
+    width: 600px;
+}
+
+.col-6 {
+    width: 720px;
+}
+
+.col-7 {
+    width: 840px;
+}
+
+.col-8 {
+    width: 960px;
+}
+
+
+/* push */
+
+.push-1 {
+    margin-left: 120px;
+}
+
+.pull-1 {
+    margin-right: 120px;
+}
+
+.marginT {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+
+/* row */
+
+.row {
+    background-color: #fff;
+}
+
+
+/* 버튼디자인 */
+
+.button80 {
+    width: 80px;
+    height: 30px;
+    border: 1px solid #aaaaaa;
+    background-color: #f6f6f6;
+}
+
+.button90 {
+    width: 90px;
+    height: 30px;
+    border: 1px solid #aaaaaa;
+    background-color: #f6f6f6;
+}
+
+option[value="a"][disabled] {
+    display: none;
+}
+
+select {
+    height: 30px;
+    padding-left: 10px;
+    font-size: 11px;
+    color: #868686;
+    border-radius: 15px;
+    -webkit-appearance: none;
+    /* 화살표 없애기 for chrome*/
+    -moz-appearance: none;
+    /* 화살표 없애기 for firefox*/
+    appearance: none;
+    /* 화살표 없애기 공통*/
+    background: url('../images/arrow.png') no-repeat 90% 50%;
+    /* 화살표 아이콘 추가 */
+    background-size: 12px 7px;
+}
+
+select::-ms-expand {
+    display: none;
+    /* 화살표 없애기 for IE10, 11*/
+}
+
+.boxcart110 {
+    border: 0;
+    border-radius: 15px;
+    width: 110px;
+    height: 30px;
+    background-color: #1f4ba5;
+}
+
+.boxcart170 {
+    border: 0;
+    border-radius: 15px;
+    width: 170px;
+    height: 30px;
+    background-color: #1f4ba5;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~ */
+
+
+/* 마우스오버 */
+
+
+/* 마우스호버 */
+
+.phover:hover {
+    cursor: pointer;
+}
+
+.hoverwarp {
+    grid-column: 1/4;
+    grid-row: 1/4;
+    background-color: #000;
+    opacity: 0;
+}
+
+.size1,
+.addcart1,
+.wishbox-warp {
+    opacity: 0;
+}
+
+.phover:hover .hoverwarp {
+    transition: .4s ease-in-out;
+    background-color: #222222;
+    opacity: 0.9;
+}
+
+.phover:hover .disimg {
+    opacity: 0;
+}
+
+.phover:hover .ptitle,
+.phover:hover .isale,
+.phover:hover .pri,
+.phover:hover .sprice,
+.phover:hover .s1,
+.phover:hover .ac11,
+.phover:hover .aw1,
+.phover:hover .wishbox-warp {
+    transition: .4s ease-in-out;
+    opacity: 1;
+    z-index: 1;
+}
+
+.phover:hover .pri {
+    color: red;
+}
+
+.phover:hover .ptitle {
+    color: #fff;
+}
+
+.phover:hover .sprice {
+    color: #a1a1a1;
+}
+
+
+/* ----호버끝------ */
+
+
+/* wishbox 공통사항 */
+
+.wishbox {
+    visibility: hidden;
+}
+
+[class*="addcart"] {
+    font-family: 'VarelaRound';
+    font-size: 12px;
+    text-align: center;
+    color: #ffffff;
+}
+
+[class*="addwish"]::before {
+    font-family: 'PTSerifItalic';
+    font-size: 12px;
+    line-height: 1.5;
+    color: #b8b8b8;
+    content: "Add to wishlist";
+    content: url('../images/addwish.png') "Add to wishlist";
+}
+
+.wishbox:checked+label::before {
+    content: url('../images/addwish-done.png') "Added";
+}
+
+
+/* ------------- */
+
+.product1 {
+    display: grid;
+    grid-template-columns: 26px auto 26px;
+    grid-template-rows: 29px auto 29px;
+    text-align: center;
+    height: 360px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pro-title {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: start;
+    font-family: 'VarelaRound';
+    line-height: 1.33;
+    font-size: 12px;
+}
+
+.imgproduct {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+    width: 150px;
+    height: 150px;
+}
+
+.icon-sale {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    align-self: end;
+}
+
+.price {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: end;
+    font-family: 'Oswald';
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sale-price {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    align-self: end;
+    text-decoration: line-through;
+    font-family: 'Oswald';
+    font-size: 8px;
+    font-weight: bold;
+    color: #a1a1a1;
+}
+
+.size1 {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: start;
+    margin-left: -9px;
+}
+
+.addcart1 {
+    margin-right: -9px;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: end;
+}
+
+.wishbox-grid {
+    font-family: 'PTSerif';
+    font-size: 12px;
+    color: #b8b8b8;
+    margin-top: 62px;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: start;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+
+/* 프로덕트1 끝 */
+
+
+/* 프로덕트2 */
+
+.product2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(6, 120px);
+    grid-template-rows: 15px 15px 45px 15px 15px 15px;
+}
+
+.pro2-title {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+    width: 180px;
+    font-family: 'VarelaRound';
+    font-size: 12px;
+    line-height: 1.33;
+    color: #222222;
+}
+
+.pro2-sub-title {
+    grid-column: 2;
+    grid-row: 4;
+    font-family: 'PTSerifItalic';
+    font-size: 12px;
+    line-height: 1.5;
+    color: #b8b8b8;
+}
+
+.imgproduct2 {
+    grid-column: 1;
+    grid-row: 2;
+    width: 90px;
+    height: 90px;
+    justify-self: center;
+}
+
+.icon2-sale {
+    grid-column: 4;
+    grid-row: 4;
+    align-self: end;
+}
+
+.price2 {
+    grid-column: 4;
+    grid-row: 3;
+    align-self: start;
+    font-family: 'Oswald';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sale-price2 {
+    grid-column: 4;
+    grid-row: 4;
+    align-self: end;
+    justify-self: center;
+    text-decoration: line-through;
+    font-family: 'Oswald';
+    font-size: 9px;
+    color: #a1a1a1;
+}
+
+.size2 {
+    grid-column: 5;
+    grid-row: 3;
+}
+
+.addcart2 {
+    grid-column: 6;
+    grid-row: 3;
+    justify-self: end;
+    margin-right: 30px;
+}
+
+.wishbox2-grid {
+    font-family: 'PTSerif';
+    font-size: 12px;
+    color: #b8b8b8;
+    margin-top: 62px;
+    grid-column: 5;
+    grid-row: 4;
+    align-self: end;
+    margin-left: -20px;
+    justify-self: start;
+}
+
+
+/* 프로덕트3 */
+
+.product3 {
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-template-rows: 30px auto 30px;
+    height: 240px;
+}
+
+.pro3-title {
+    font-family: 'VarelaRound';
+    font-size: 12px;
+    line-height: 1.33;
+    width: 108px;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    text-align: center;
+}
+
+.imgproduct3 {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    justify-self: center;
+}
+
+.icon3-sale {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+}
+
+.price3 {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    justify-self: center;
+}
+
+.sale-price3 {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    justify-self: end;
+    text-decoration: line-through;
+}
+
+.size3 {
+    grid-column: 5;
+    grid-row: 3;
+}
+
+.addcart3 {
+    grid-column: 6;
+    grid-row: 3;
+}
+
+.wishbox3-grid {
+    font-family: 'PTSerif';
+    font-size: 12px;
+    color: #b8b8b8;
+    margin-top: 62px;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: start;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+
+/* 프로덕트4 */
+
+.product4 {
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    grid-template-rows: 30px auto 30px;
+    height: 480px;
+}
+
+.imgproduct4 {
+    grid-column: 1;
+    grid-row: 1;
+    width: 480px;
+    height: 480px;
+}
+
+.icon4-sale {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.sum-image {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+}
+
+.sum-image img {
+    display: block;
+    padding-top: 10px;
+}
+
+.checkcl-warp {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    align-self: start;
+}
+
+.scalespan {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    justify-self: end;
+    background: url('../images/scale.png') 50% 50% no-repeat;
+    background-color: #fff;
+    display: block;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 1px 2px #aaa;
+}
+
+
+/* 체크박스 스타일 */
+
+.checkpostion input {
+    visibility: hidden;
+}
+
+.checkpostion label {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 1px 1px #aaa;
+}
+
+.label1 {
+    background-color: #222222;
+}
+
+.checkbgc1:checked+label {
+    background-color: darkcyan;
+    background: url('../images/picksprite.png') -20px top no-repeat;
+}
+
+.label2 {
+    background-color: #8a6349;
+}
+
+.checkbgc2:checked+label {
+    background-color: darkcyan;
+    background: url('../images/picksprite.png') -140px top no-repeat;
+}
+
+.label3 {
+    background-color: #ececec;
+}
+
+.checkbgc3:checked+label {
+    background-color: darkcyan;
+    background: url('../images/picksprite.png') -100px top no-repeat;
+}
+
+.label4 {
+    background-color: #406ba6;
+}
+
+.checkbgc4:checked+label {
+    background-color: darkcyan;
+    background: url('../images/picksprite.png') -180px top no-repeat;
+}
+
+.label5 {
+    background-color: #d03131;
+}
+
+.checkbgc5:checked+label {
+    background-color: darkcyan;
+    background: url('../images/picksprite.png') -60px top no-repeat;
+}
+
+
+/* 체크박스 스타일 끝 */
+
+
+/* product4-detail */
+
+.product4-detail {
+    display: grid;
+    grid-template-columns: 50px 190px 190px 50px;
+    grid-template-rows: 40px 40px 85px 82px auto 67px 10px 30px 23px;
+    height: 480px;
+}
+
+.catetitle {
+    grid-column: 2;
+    grid-row: 2;
+    font-family: 'OswaldBold';
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: #1f4ba5;
+}
+
+.add-cate {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+}
+
+.img4text {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.prd-desc {
+    width: 366px;
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.prd-desc-1 {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.prd-desc-2 {
+    grid-column: 3;
+    grid-row: 5;
+}
+
+.bottomcon {
+    grid-column: 1/5;
+    grid-row: 6;
+    border-top: 1px solid #aaa;
+}
+
+.sizeguide {
+    grid-column: 3;
+    grid-row: 6;
+    align-self: end;
+    font-family: 'PTSerifItalic';
+    line-height: 1.5;
+    color: #b8b8b8;
+    margin-left: 105px;
+}
+
+.sizeguide::before {
+    content: url('../images/sizeguide.png');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.price4 {
+    grid-column: 2;
+    grid-row: 6;
+    align-self: end;
+    font-family: 'OswaldBold';
+    font-size: 24px;
+    text-align: left;
+    color: #ff3f2b;
+}
+
+.price4-sale {
+    grid-column: 2;
+    grid-row: 8;
+    align-self: end;
+    font-family: 'OswaldBold';
+    font-size: 14px;
+    text-align: left;
+    color: #a1a1a1;
+    text-decoration: line-through;
+}
+
+.addcart4 {
+    grid-column: 3;
+    grid-row: 8;
+    align-self: end;
+    width: 170px;
+    height: 30px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #1f4ba5;
+    margin-left: -50%;
+}
+
+.pro-detail-wrap {
+    grid-column: 3;
+    grid-row: 8;
+    align-self: center;
+    margin-left: 80px;
+    width: 120px;
+}
+
+.wishbox1 {
+    visibility: hidden;
+}
+
+.size4 {
+    grid-column: 3;
+    grid-row: 6;
+    align-self: end;
+    width: 80px;
+    height: 30px;
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    border: 0;
+    margin-left: -50%;
+}
+
+.quantity {
+    grid-column: 3;
+    grid-row: 6;
+    align-self: end;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: 0;
+    margin-left: -5px;
+    background-color: #f6f6f6;
+    text-align: center;
+}
+
+input[type="number"].mod::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: #FFF url('../images/plus.png') no-repeat center center;
+    top: 0;
+    right: 0;
+    /* shows Spin Buttons per default (Chrome >= 39) */
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .container {
+            width: 500px;
+            height: 300px;
+            position: relative;
+            margin-top: 50px;
+            perspective: 300px;
+            background-color: #23538a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 200px;
+        }
+
+        .box {
+            position: relative;
+            z-index: 99;
+            width: 200px;
+            height: 80px;
+            border-radius: 40px;
+            margin-left: 50px;
+            background-image: -webkit-linear-gradient(bottom right, #6B858F 0%, #2B67AB 50%, #112842 100%);
+            -webkit-filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.25));
+        }
+
+        .boxshadow {
+            z-index: -22;
+            position: absolute;
+            width: 200px;
+            height: 80px;
+            border-radius: 40px;
+            left: 160px;
+            top: 115px;
+            background-color: rgba(0, 0, 0, 0.25);
+            filter: blur(2px);
+        }
+
+        .boxact {
+            /* transform: rotate(-10deg); */
+            top: 115px;
+            left: 120px;
+            /* transform: translateY(10px); */
+            transition: all 0.2s ease-in-out;
+        }
+
+        .action {
+            background-image: -webkit-linear-gradient(bottom right,#112842 0%, #2B67AB 50%, #6B858F 80%, #6B858F 100%);
+            -webkit-transform: rotate3d(0, 1, 0, 20deg);
+            transition: all 0.2s ease-in-out;
+        }
+
+
+
+        .hightlight {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            -webkit-filter: blur(30px);
+            filter: blur(30px);
+            background: black;
+            opacity: 0.15;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .highaction {
+            z-index: 99999;
+            position: absolute;
+            top: 100px;
+            right: 280px;
+            background: white;
+             opacity: 0.15;
+             filter: blur(30px);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .cir {
+            position: absolute;
+            right: 20px;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+
+            background-color: #305b8d;
+            box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.5) inset;
+        }
+
+        .light {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            background: -webkit-radial-gradient(80%, ellipse cover, #ffffff 0%, #ffffff 47%, #fac695 100%);
+            
+        }
+
+        .lightact {
+            background: -webkit-radial-gradient(10%, ellipse cover, #fac695 0%, #f5ab66 47%, #ef8d31 100%);
+            transition: all 1s ease-in-out;
+        }
+
+        .ciract {
+            box-shadow: -3px -3px 1px rgba(0, 0, 0, 0.5) inset;
+
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="cir">
+                <div class="light"></div>
+            </div>
+
+        </div>
+        <div class="boxshadow"></div>
+        <div class="shadow"></div>
+        <div class="hightlight"></div>
+    </div>
+    <script>
+        let btn = document.querySelector('.box');
+        let high = document.querySelector('.hightlight');
+        let cir = document.querySelector('.cir');
+        let boxshadow = document.querySelector('.boxshadow');
+        let light = document.querySelector('.light');
+        btn.addEventListener('click', e => {
+            if (btn.classList.contains('action')) {
+                btn.classList.remove('action');
+                high.classList.remove('highaction');
+                cir.classList.remove('ciract');
+                boxshadow.classList.remove('boxact');
+                light.classList.remove('lightact');
+            } else {
+                btn.classList.add('action');
+                high.classList.add('highaction');
+                cir.classList.add('ciract');
+                boxshadow.classList.add('boxact');
+                light.classList.add('lightact');
+            }
+
+        })
+    </script>
+</body>
+
+</html>

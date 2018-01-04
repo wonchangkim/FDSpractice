@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'caculator';
+    src: local(Crashed Scoreboard),
+    url('./fonts/Crashed-Scoreboard.woff') format('woff');
+}
+@font-face {
+    font-family: 'digital';
+    src: local(digital-7),
+    url('./fonts/digital-7.woff') format('woff');
+}

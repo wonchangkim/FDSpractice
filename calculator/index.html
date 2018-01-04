@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./css/style.css">
+
+<head>
+
+</head>
+
+<BODY>
+    <h2 align="center">계 산 기</h2>
+    <form name="calform">
+        <div class="container">
+            <h1 class="display"></h1>
+            <input class="resultdisplay" type="text" name="disp" id="disp" value="0">
+            <span class="lcd"></span>
+            <input class="btn-num num7" type="button" value="7" onclick="but('7')">
+            <input class="btn-num num8" type="button" value="8" onclick="but('8')">
+            <input class="btn-num num9" type="button" value="9" onclick="but('9')">
+            <input class="btn-num numc" type="button" value="C" onclick="c()">
+            <input class="btn-num num4" type="button" value="4" onclick="but('4')">
+            <input class="btn-num num5" type="button" value="5" onclick="but('5')">
+            <input class="btn-num num6" type="button" value="6" onclick="but('6')">
+            <input class="btn-num numdivision" type="button" value="/" onclick="but('/')">
+            <input class="btn-num numremainder" type="button" value="%" onclick="but('%')">
+            <input class="btn-num num1" type="button" value="1" onclick="but('1')">
+            <input class="btn-num num2" type="button" value="2" onclick="but('2')">
+            <input class="btn-num num3" type="button" value="3" onclick="but('3')">
+            <input class="btn-num numdubble" type="button" value="X" onclick="but('*')">
+            <input class="btn-num numplus" type="button" value="+" onclick="but('+')">
+            <input class="btn-num num0" type="button" value="0" onclick="but('0')">
+            <input class="btn-num numpoint" type="button" value="." onclick="but('.')">
+            <input class="btn-num numtoatal" type="button" value="=" onclick="total()">
+            <input class="btn-num numminus" type="button" value="-"  onclick="but('-')">
+        </div>
+    </form>
+</BODY>
+
+<script>
+    let str = '';
+
+    function but(val) {
+        if (str === '') {
+            if (!isNaN(Number((val)))) {
+                str += val;
+            }
+        } else if (isNaN(Number((str[str.length - 1]))) && isNaN(Number((val)))) {
+            str = str.replace(str[str.length - 1], val);
+
+        } else {
+            str += val;
+        }
+        document.querySelector(".display").innerHTML = str;
+    }
+
+    function c() {
+        str = '';
+        document.querySelector(".display").innerHTML = "0";
+    }
+
+    function total() {
+
+        let strcheck = Number(str[str.length - 1]);
+        let totalNumber = ''
+        if (isNaN(strcheck)) {
+
+            str = str.substring(0, str.length - 1);
+
+            totalNumber = eval(str);
+            document.querySelector(".display").innerHTML = str;
+        } else {
+            totalNumber = eval(str);
+        }
+
+        document.querySelector("#disp").value = totalNumber;
+    }
+</script>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="debounce" type="text">
+    <input id="throttle" type="text">
+    <div class="wrap"></div>
+
+    <script>
+        function debounce(cb, time) {
+            let timeoutId;
+            return function () {
+                if (timeoutId) {
+                    clearTimeout(timeoutId);
+                }
+                timeoutId = setTimeout(() => {
+                    cb();
+                    timeoutId = null;
+                }, time)
+            }
+        }
+
+        function throttle(cb, time) {
+            let throttled = false;
+            let timeoutId;
+            return function () {
+                if (!timeoutId) {
+                    timeoutId = setTimeout(() => {
+                        throttled = false;
+                        timeoutId = null;
+                    }, time);
+                }
+                if (!throttled) {
+                    cb();
+                }
+                throttled = true;
+            }
+        }
+
+
+        const debounceListener = debounce(() => {
+            alert('hello');
+        }, 2000);
+
+        let de = document.querySelector('#debounce');
+        de.addEventListener('input', debounceListener); // debounceListener 함수여서 바로 쓸수있다.
+
+        const throttledAppendChat = throttle(function () {
+            const chatInput = th.value;
+            const pEl = document.createElement('p');
+            pEl.textContent = chatInput;
+            document.querySelector('div').appendChild(pEl);
+            chatInput.value = ''; //초기화하는방법
+            // th.reset(); form 태그안에 있을때
+        }, 5000);
+
+
+        let th = document.querySelector('#throttle');
+        th.addEventListener('keydown', e => {
+            if (e.key === 'Enter') {
+                throttledAppendChat();
+            }
+            console.log(e);
+            console.log(e.currentTarget.value);
+        })
+    </script>
+</body>
+
+</html>

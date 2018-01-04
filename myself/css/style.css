@@ -1,0 +1,339 @@
+@charset "utf-8";
+@import url("./normalize.css");
+@import url("../css/fontello.css");
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+button,
+body,
+div,
+img,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+ul {
+    list-style: none;
+}
+ol {
+    list-style: none;
+    
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    height: 100vh;
+    background-color: #d6eaf6;
+    margin: 0 auto;
+}
+
+.dec {
+    float: left;
+    margin-top: 200px;
+    margin-left: 87px;
+    width: 400px;
+    color: #464646;
+}
+
+.kakao {
+   
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 21px;
+    width: 325px;
+    height: 639px;
+    background: url('../images/iphone6.png');
+}
+
+.chatbgc {
+    background-color: #9cbad4;
+    position: absolute;
+    top: 79px;
+    left: 31px;
+    width: 266px;
+    height: 474px;
+}
+
+.statusbar {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 14px;
+    width: 266px;
+}
+
+.statusbar>ul>li {
+    position: absolute;
+    top: 0;
+    font-size: 13px;
+}
+
+.icon-signal:before {
+    font-family: 'fontello';
+    content: '\e807';
+}
+
+.icon-signal {
+    left: 0;
+}
+
+.carrier {
+    left: 20px;
+}
+
+.icon-wifi {
+    left: 40px;
+}
+
+.time {
+    left: 110px;
+}
+
+.icon-bluetooth-b {
+    right: 60px;
+}
+
+.batterystatus {
+    right: 30px;
+}
+
+.icon-battery-4 {
+    right: 5px;
+}
+
+.menu {
+    position: relative;
+    border-bottom: 1px solid rgba(100, 97, 97, 0.2);
+    margin-top: 28px;
+    height: 40px;
+}
+
+.icon-angle-left {
+    font-size: 28px;
+    display: inline-block;
+}
+
+.id {
+    vertical-align: top;
+    font-size: 18px;
+    margin-left: 65px;
+    display: inline-block;
+}
+
+.icon-search-1 {
+    vertical-align: top;
+    font-size: 24px;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.icon-menu {
+    vertical-align: top;
+    font-size: 24px;
+    display: inline-block;
+}
+
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+   
+}
+.block{
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+}
+/* chat area */
+.chat-messages {
+    height: 385px;
+    width: 266px;
+    position: absolute;
+   overflow: scroll;
+    
+}
+.chat-messages-list{
+    padding: 10px 10px 10px 10px;  
+
+}
+.anwser{
+    position: relative;
+}
+.profileimg {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% 50%;
+    background-image: url('../images/profile.png');
+    background-size: 40px;
+}
+.anwtxtwrap {
+    margin-left: 50px;
+}
+.name {
+    display: block;
+    font-size: 12px;
+    
+}
+.anwtext{
+   
+    font-size: 12px;
+}
+.awschatbubble { 
+    margin-top: 5px;
+    padding: 7px 10px 7px 10px;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+}
+.reschatbubble {
+    padding: 7px 10px 7px 10px;
+    display: inline-block;
+    background-color: #ffeb00;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.txttime {
+    vertical-align: bottom;
+    font-size: 5px;
+    color: #617583;
+}
+.restxt{
+    margin-top: 10px;
+}
+
+/* input area */
+.inputtxt {
+    position: absolute;
+    bottom: 0px;
+    height: 37px;
+    width: 266px;
+    background-color: #eeeeee;
+}
+
+.icon-plus {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 25px;
+    
+}
+
+.inputtxt form {
+    position: absolute;
+    top: 3px;
+    left: 40px;
+    display: inline-block;
+    
+}
+.inputtxt input {
+    width: 220px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(100, 97, 97, 0.2);
+    font-size: 15px;
+    padding-left: 10px;
+}
