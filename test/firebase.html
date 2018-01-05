@@ -22,8 +22,9 @@
   <div class="display-name"></div>
   <div class="email"></div>
   <ul class="repo-list">
-
   </ul>
+
+  <input type="text" class="new-todo">
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
@@ -41,7 +42,9 @@
   <script>
     var provider = new firebase.auth.GithubAuthProvider();
     document.querySelector('.login').addEventListener('click', async e => {
-      const result = await firebase.auth().signInWithPopup(provider);
+      const result = await firebase.auth().signInWithPopup(provider); 
+      //끝나면 로그인 된상태
+
 
       // This gives you a GitHub Access Token. You can use it to access the GitHub API.
       var token = result.credential.accessToken;
@@ -68,6 +71,21 @@
         linkEl.textContent = repo.full_name;
         linkEl.href = repo.html_url;
       });
+      firebase.database().ref('todos').on('value', snapshot => {
+        console.log(snapshot.val());
+      })
+    })
+
+    document.querySelector('.new-todo').addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        //입력 필드에 들어있는 값을 파이어베이스에 전송
+         firebase.database().ref('todos').push({
+           //promise 리턴한다.
+          content: e.currentTarget.value
+        })
+        e.currentTarget.value = '';
+        //입력 필드를 비워주기
+      }
     })
   </script>
 

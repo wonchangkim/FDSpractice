@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+            margin: 0;
+        }
+
+        .contanier {
+            width: 100vw;
+            height: 2000px;
+            filter: url('#goo');
+        }
+
+        header {
+
+            height: 100px;
+            background-color: #fff;
+        }
+
+        .menu {
+            width: 70px;
+            position: fixed;
+            background-color: #fff;
+            height: 70px;
+            border-radius: 50%;
+            top: 10px;
+        }
+        .action{
+            top: 200px;
+            transition: all 2s ease-in;
+        }
+        .a{
+            background-color: white;
+            left : 400px;
+            top: 20px;
+        }
+        .a1 {
+ background-color: violet;
+            left: 100px;
+        }
+
+        .a2 {
+ background-color: salmon;
+            left: 200px;
+        }
+
+        .a3 {
+ background-color: skyblue;
+            left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contanier">
+        <header>
+            <div class="menu a"></div>
+            <div class="menu a1"></div>
+            <div class="menu a2"></div>
+            <div class="menu a3"></div>
+        </header>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 1 1 1 0  0 1 1 1 0  1 1 1 0 0  0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+
+
+    <script>
+        let a = document.querySelector('.a');
+        let a1 = document.querySelector('.a1');
+        let a2 = document.querySelector('.a2');
+        let a3 = document.querySelector('.a3');
+        a.addEventListener('click', e=>{
+            a.classList.add('action');
+        })
+ a1.addEventListener('click', e=>{ a1.classList.add('action'); })
+ a2.addEventListener('click', e=>{ a2.classList.add('action'); })
+ a3.addEventListener('click', e=>{ a3.classList.add('action'); })
+    </script>
+</body>
+
+</html>
