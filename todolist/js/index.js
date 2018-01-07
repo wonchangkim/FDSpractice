@@ -1,3 +1,33 @@
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCkVFmaR8EseDpo89jEhsmoC4YQJ00BfD4",
+  authDomain: "todolise-2e370.firebaseapp.com",
+  databaseURL: "https://todolise-2e370.firebaseio.com",
+  projectId: "todolise-2e370",
+  storageBucket: "todolise-2e370.appspot.com",
+  messagingSenderId: "1019735653772"
+};
+
+firebase.initializeApp(config);
+
+var provider = new firebase.auth.GithubAuthProvider();
+
+document.querySelector('.login').addEventListener('click', async e => {
+    const result = await firebase.auth().signInWithPopup(provider);
+    // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+  console.log(token);
+});
+
+
+
+
+
+
+
 //시간
 moment.locale('ko');
 const nowtime = moment().format('LLL');
@@ -66,7 +96,7 @@ function add() {
     if (changeRight > 0) {
       wrapEl.style.left = '+' + changeRight + 'px';
       console.log('오른쪽');
-       wrapEl.appendChild(checkbox);
+      wrapEl.appendChild(checkbox);
       checkbox.textContent = '완료';
       checkbox.classList.add('checkbox');
       checkbox.style.display = 'block';

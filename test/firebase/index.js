@@ -27,7 +27,7 @@ document.querySelector('.login').addEventListener('click', async e => {
     document.querySelector('.display-name').textContent = user.displayName;
     document.querySelector('.email').textContent = user.email;
 
-    console.log(token);
+    
     document.querySelector('.warp').classList.add('none');
     // https://api.github.com/user/repos?access_token=OAUTH-TOKEN
     const res = await fetch(`https://api.github.com/user/repos?access_token=${token}`);

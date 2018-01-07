@@ -110,6 +110,27 @@ body {
   clear: both;
   display: block;
 }
+.loginwrap{
+ background-color: #3D8C99;
+ width: 100vw;
+ height: 100vh;
+ z-index: 99;
+ margin: 0;
+ top: 0;
+ left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login{
+  border-radius: 20px;
+  height: 80px;
+  width: 100px;
+  font-size: 20px;
+
+}
+
 
 .container {
   padding: 10px 10px 10px 10px;
