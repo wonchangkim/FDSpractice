@@ -27,8 +27,8 @@ document.querySelector('.login').addEventListener('click', async e => {
     document.querySelector('.display-name').textContent = user.displayName;
     document.querySelector('.email').textContent = user.email;
 
-    
     document.querySelector('.warp').classList.add('none');
+    
     // https://api.github.com/user/repos?access_token=OAUTH-TOKEN
     const res = await fetch(`https://api.github.com/user/repos?access_token=${token}`);
     const repos = await res.json() //텍스트를 객체로 반환
